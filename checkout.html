@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Paiement sécurisé — Lunaria</title>
+  <meta name="description" content="Finalisez votre commande Lunaria : livraison partout au Canada.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#0c1722">
+  <link rel="icon" href="img/lunaria/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap">
+  <link rel="stylesheet" href="css/store.css">
+</head>
+<body data-page="checkout">
+<main id="main">
+  <section class="section is-tight" style="padding-top:40px">
+    <div class="wrap">
+      <div class="checkout-head">
+        <div>
+          <nav class="crumbs is-dark" aria-label="Fil d’Ariane"><a href="cart.html">Panier</a><span aria-hidden="true">/</span><span>Caisse</span></nav>
+          <h1>Paiement sécurisé</h1>
+        </div>
+        <ol class="progress-steps is-dark" aria-label="Étapes de la commande">
+          <li class="is-done"><b>✓</b>Panier</li>
+          <li class="is-on" aria-current="step"><b>2</b>Livraison et paiement</li>
+          <li><b>3</b>Confirmation</li>
+        </ol>
+      </div>
+
+      <form class="checkout" data-checkout novalidate>
+        <div class="checkout-main">
+          <div data-account-hint></div>
+
+          <fieldset class="panel">
+            <legend class="panel-title"><span class="step-num">1</span>Coordonnées</legend>
+            <div class="field-grid">
+              <div class="field is-full">
+                <label for="email">Adresse courriel</label>
+                <input id="email" name="email" type="email" autocomplete="email" data-validate="required email" placeholder="vous@exemple.ca">
+                <p class="field-hint">Votre confirmation de commande et le suivi y seront envoyés.</p>
+              </div>
+              <label class="check is-full"><input type="checkbox" name="newsletter">Recevoir les nouveautés et offres Lunaria</label>
+            </div>
+          </fieldset>
+
+          <fieldset class="panel">
+            <legend class="panel-title"><span class="step-num">2</span>Adresse de livraison</legend>
+            <div class="field-grid">
+              <div class="field"><label for="firstName">Prénom</label><input id="firstName" name="firstName" autocomplete="given-name" data-validate="required"></div>
+              <div class="field"><label for="lastName">Nom</label><input id="lastName" name="lastName" autocomplete="family-name" data-validate="required"></div>
+              <div class="field is-full"><label for="address1">Adresse</label><input id="address1" name="address1" autocomplete="address-line1" data-validate="required" placeholder="Numéro et rue"></div>
+              <div class="field is-full"><label for="address2">Appartement, bureau <small>(facultatif)</small></label><input id="address2" name="address2" autocomplete="address-line2"></div>
+            </div>
+            <div class="field-grid is-3" style="margin-top:16px">
+              <div class="field"><label for="city">Ville</label><input id="city" name="city" autocomplete="address-level2" data-validate="required"></div>
+              <div class="field"><label for="province">Province</label><select id="province" name="province" autocomplete="address-level1" data-province></select></div>
+              <div class="field"><label for="postal">Code postal</label><input id="postal" name="postal" autocomplete="postal-code" data-validate="required postal" placeholder="H2X 1Y4" maxlength="7"></div>
+            </div>
+            <div class="field-grid" style="margin-top:16px">
+              <div class="field"><label for="phone">Téléphone</label><input id="phone" name="phone" type="tel" autocomplete="tel" data-validate="required phone" placeholder="514 555-0123"><p class="field-hint">Pour le transporteur, en cas de besoin.</p></div>
+              <div data-save-address></div>
+            </div>
+          </fieldset>
+
+          <fieldset class="panel">
+            <legend class="panel-title"><span class="step-num">3</span>Mode de livraison</legend>
+            <div class="choice-list" data-shipping role="radiogroup" aria-label="Mode de livraison"></div>
+          </fieldset>
+
+          <fieldset class="panel">
+            <legend class="panel-title"><span class="step-num">4</span>Paiement <small>Visa · Mastercard · Amex</small></legend>
+            <p class="demo-note">
+              <svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg>
+              <span>Boutique de démonstration : aucun paiement n’est traité et le numéro de carte n’est ni envoyé ni conservé. Utilisez la carte test <strong>4242 4242 4242 4242</strong>, une date future et n’importe quel CVC.</span>
+            </p>
+            <div class="field-grid">
+              <div class="field is-full">
+                <label for="cardNumber">Numéro de carte</label>
+                <input id="cardNumber" name="cardNumber" inputmode="numeric" autocomplete="cc-number" data-validate="required card" placeholder="1234 1234 1234 1234" maxlength="23">
+                <span class="input-icon" data-card-brand></span>
+              </div>
+              <div class="field is-full"><label for="cardName">Nom sur la carte</label><input id="cardName" name="cardName" autocomplete="cc-name" data-validate="required"></div>
+              <div class="field"><label for="cardExp">Expiration</label><input id="cardExp" name="cardExp" inputmode="numeric" autocomplete="cc-exp" data-validate="required exp" placeholder="MM / AA" maxlength="7"></div>
+              <div class="field"><label for="cardCvc">CVC</label><input id="cardCvc" name="cardCvc" inputmode="numeric" autocomplete="cc-csc" data-validate="required cvc" placeholder="123" maxlength="4"></div>
+            </div>
+            <label class="check" style="margin-top:14px"><input type="checkbox" name="terms" data-terms>J’accepte les <a href="aide.html#conditions" target="_blank" rel="noopener">conditions de vente</a> et la <a href="aide.html#retours" target="_blank" rel="noopener">politique de retour</a></label>
+            <p class="field-error" data-terms-error></p>
+          </fieldset>
+
+          <button class="btn btn-lg btn-block" type="submit" style="margin-top:22px" data-pay>Payer</button>
+          <p class="pay-btn-note"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Paiement chiffré · Retours gratuits 30 jours</p>
+        </div>
+
+        <aside class="summary" data-summary aria-label="Récapitulatif de la commande"></aside>
+      </form>
+    </div>
+  </section>
+</main>
+
+<script src="js/store/products.js"></script>
+<script src="js/store/core.js"></script>
+<script src="js/store/page-checkout.js"></script>
+</body>
+</html>

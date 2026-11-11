@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nous joindre — Lunaria</title>
+  <meta name="description" content="Une question sur une monture, une commande ou votre ordonnance ? L’équipe Lunaria vous répond en moins de 24 h ouvrables.">
+  <meta name="theme-color" content="#0c1722">
+  <link rel="icon" href="img/lunaria/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap">
+  <link rel="stylesheet" href="css/store.css">
+</head>
+<body data-page="contact">
+<main id="main">
+  <section class="page-hero">
+    <div class="footer-sky" aria-hidden="true"></div>
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Fil d’Ariane"><a href="index.html">Accueil</a><span aria-hidden="true">/</span><span>Contact</span></nav>
+      <h1>Parlons lunettes</h1>
+      <p>Une question sur une monture, une commande ou votre ordonnance ? Notre équipe vous répond en moins de 24 h ouvrables.</p>
+    </div>
+  </section>
+
+  <section class="section is-tight">
+    <div class="wrap contact-grid">
+      <div class="contact-cards">
+        <div class="contact-card" data-reveal>
+          <span class="value-icon"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg></span>
+          <div><h3>Courriel</h3><p><a href="mailto:contact@lunaria.ca">contact@lunaria.ca</a><br>Réponse en moins de 24 h ouvrables.</p></div>
+        </div>
+        <div class="contact-card" data-reveal style="--d:100ms">
+          <span class="value-icon"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="15" r="4"/><circle cx="18" cy="15" r="4"/><path d="M14 15a2 2 0 0 0-4 0M2.5 13 5 7c.7-1.3 1.4-2 3-2M21.5 13 19 7c-.7-1.3-1.5-2-3-2"/></svg></span>
+          <div><h3>Ordonnances</h3><p><a href="mailto:ordonnances@lunaria.ca">ordonnances@lunaria.ca</a><br>Indiquez votre numéro de commande (LUN-…).</p></div>
+        </div>
+        <div class="contact-card" data-reveal style="--d:200ms">
+          <span class="value-icon"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+          <div><h3>Heures du service client</h3><p>Lundi au vendredi, 9 h à 18 h (HE)<br>Samedi, 10 h à 15 h</p></div>
+        </div>
+        <div class="contact-card" data-reveal style="--d:300ms">
+          <span class="value-icon"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 16V8a2 2 0 0 0-1-1.7l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.7l7 4a2 2 0 0 0 2 0l7-4a2 2 0 0 0 1-1.7Z"/><path d="M3.3 7 12 12l8.7-5M12 22V12"/></svg></span>
+          <div><h3>Suivre une commande</h3><p>Retrouvez l’état de votre livraison en tout temps.<br><a href="order.html">Suivre ma commande →</a></p></div>
+        </div>
+      </div>
+
+      <div class="panel" data-reveal style="--d:120ms" data-contact-panel>
+        <h2 class="panel-title">Écrivez-nous</h2>
+        <form data-contact novalidate>
+          <div class="field-grid">
+            <div class="field"><label for="ct-name">Nom complet</label><input id="ct-name" name="name" autocomplete="name" data-validate="required"></div>
+            <div class="field"><label for="ct-email">Courriel</label><input id="ct-email" name="email" type="email" autocomplete="email" data-validate="required email"></div>
+            <div class="field"><label for="ct-subject">Sujet</label>
+              <select id="ct-subject" name="subject">
+                <option>Question sur une monture</option>
+                <option>Suivi de commande</option>
+                <option>Ordonnance et verres</option>
+                <option>Retour ou échange</option>
+                <option>Autre</option>
+              </select>
+            </div>
+            <div class="field"><label for="ct-order">N° de commande <small>(facultatif)</small></label><input id="ct-order" name="order" placeholder="LUN-…"></div>
+            <div class="field is-full"><label for="ct-msg">Message</label><textarea id="ct-msg" name="message" data-validate="required" maxlength="2000" placeholder="Comment pouvons-nous vous aider ?"></textarea></div>
+          </div>
+          <button class="btn btn-lg" type="submit" style="margin-top:20px">Envoyer le message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script src="js/store/products.js"></script>
+<script src="js/store/core.js"></script>
+<script>
+  Lunaria.ready(function () {
+    const L = Lunaria;
+    const form = L.$('[data-contact]');
+    const acc = L.account.current();
+    if (acc) { form.elements.namedItem('name').value = `${acc.firstName} ${acc.lastName}`; form.elements.namedItem('email').value = acc.email; }
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      if (!L.validateForm(form)) return;
+      const val = n => form.elements.namedItem(n).value.trim();
+      const ticket = 'MSG-' + Math.floor(1000 + Math.random() * 9000);
+      const messages = L.store.get('messages', []);
+      messages.push({ ticket, name: val('name'), email: val('email'), subject: val('subject'), order: val('order'), message: val('message'), date: new Date().toISOString() });
+      L.store.set('messages', messages);
+      const btn = L.$('button[type="submit"]', form);
+      btn.classList.add('is-loading');
+      setTimeout(() => {
+        L.$('[data-contact-panel]').innerHTML = `<div class="empty is-compact">
+          <svg class="confirm-check" viewBox="0 0 96 96" aria-hidden="true"><circle cx="48" cy="48" r="44" pathLength="1"/><path d="M30 49l12 12 25-26" pathLength="1"/></svg>
+          <h2>Message envoyé</h2>
+          <p>Merci ${L.esc(val('name').split(' ')[0])} ! Nous vous répondrons à <strong>${L.esc(val('email'))}</strong> en moins de 24 h ouvrables. Votre référence : <strong>${ticket}</strong>.</p>
+          <a class="btn btn-ghost" href="catalog-list.html">Retourner à la boutique</a></div>`;
+      }, 900);
+    });
+  });
+</script>
+</body>
+</html>

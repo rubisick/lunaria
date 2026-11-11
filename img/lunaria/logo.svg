@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 80" role="img" aria-label="Lunaria">
+<g fill="none" stroke="#111" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M49 17c-16 5-25 22-19 38 6 16 23 24 39 18-10-3-17-12-17-23 0-14 10-26 24-29-9-6-18-7-27-4z"/>
+  <path d="M82 47c8-10 21-10 29 0"/>
+  <rect x="62" y="40" width="25" height="18" rx="8"/><rect x="106" y="40" width="25" height="18" rx="8"/>
+  <path d="M87 47h19M62 46l-10-4M131 46l10-4"/>
+</g></svg>

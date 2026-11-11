@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Boutique — Lunaria</title>
+  <meta name="description" content="Toutes les lunettes Lunaria : montures optiques et solaires, filtrées par forme, matériau et prix.">
+  <meta name="theme-color" content="#0c1722">
+  <link rel="icon" href="img/lunaria/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap">
+  <link rel="stylesheet" href="css/store.css">
+</head>
+<body data-page="catalog">
+<main id="main">
+  <section class="page-hero">
+    <div class="footer-sky" aria-hidden="true"></div>
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Fil d’Ariane"><a href="index.html">Accueil</a><span aria-hidden="true">/</span><span data-cat-crumb>Boutique</span></nav>
+      <h1 data-cat-title>Toutes les lunettes</h1>
+      <p data-cat-sub>Montures optiques et solaires, dessinées pour la lumière du quotidien.</p>
+    </div>
+  </section>
+
+  <section class="section is-tight">
+    <div class="wrap catalog">
+      <div class="filters-backdrop" data-filters-close></div>
+      <aside class="filters" id="filters" aria-label="Filtres">
+        <div class="filters-head">
+          <h2>Filtrer</h2>
+          <button class="icon-btn" type="button" data-filters-close aria-label="Fermer les filtres">
+            <svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+          </button>
+        </div>
+        <form data-filters novalidate>
+          <div class="filter-group">
+            <h3>Type</h3>
+            <div class="seg" role="radiogroup" aria-label="Type">
+              <label><input type="radio" name="type" value="" checked><span>Toutes</span></label>
+              <label><input type="radio" name="type" value="optique"><span>Optiques</span></label>
+              <label><input type="radio" name="type" value="solaire"><span>Solaires</span></label>
+            </div>
+          </div>
+          <div class="filter-group">
+            <h3>Forme</h3>
+            <div class="shape-grid" data-shapes></div>
+          </div>
+          <div class="filter-group">
+            <h3>Matériau</h3>
+            <div data-materials></div>
+          </div>
+          <div class="filter-group">
+            <h3>Prix maximum <output data-price-out>Tous</output></h3>
+            <input type="range" name="max" min="140" max="200" step="10" value="200" aria-label="Prix maximum">
+            <div class="range-scale"><span>140 $</span><span>200 $</span></div>
+          </div>
+          <div class="filter-group">
+            <h3>Sélection</h3>
+            <label class="check"><input type="checkbox" name="tag" value="nouveau">Nouveautés</label>
+            <label class="check"><input type="checkbox" name="tag" value="solde">En solde</label>
+            <label class="check"><input type="checkbox" name="tag" value="responsable">Collection responsable</label>
+            <label class="check"><input type="checkbox" name="stock" value="1">En stock seulement</label>
+          </div>
+          <div class="filters-foot">
+            <button class="btn btn-ghost btn-block" type="button" data-filters-reset>Réinitialiser les filtres</button>
+            <button class="btn btn-block filters-toggle" type="button" data-filters-close>Voir les résultats</button>
+          </div>
+        </form>
+      </aside>
+
+      <div class="catalog-main">
+        <div class="toolbar">
+          <button class="btn btn-ghost btn-sm filters-toggle" type="button" data-filters-open aria-controls="filters">
+            <svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 6h10M18 6h2M4 12h4M12 12h8M4 18h12"/><circle cx="16" cy="6" r="2"/><circle cx="10" cy="12" r="2"/><circle cx="18" cy="18" r="2"/></svg>
+            Filtres <span class="count" data-filter-count></span>
+          </button>
+          <p class="result-count" aria-live="polite" data-result-count></p>
+          <label class="select"><span>Trier par</span>
+            <select name="sort" data-sort>
+              <option value="pertinence">Pertinence</option>
+              <option value="nouveautes">Nouveautés</option>
+              <option value="prix-asc">Prix croissant</option>
+              <option value="prix-desc">Prix décroissant</option>
+              <option value="note">Mieux notées</option>
+            </select>
+          </label>
+        </div>
+        <div class="active-chips" data-chips></div>
+        <div class="grid" data-catalog-grid></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script src="js/store/products.js"></script>
+<script src="js/store/core.js"></script>
+<script src="js/store/page-catalog.js"></script>
+</body>
+</html>

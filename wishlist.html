@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mes favoris — Lunaria</title>
+  <meta name="description" content="Les montures Lunaria que vous avez gardées en favoris.">
+  <meta name="theme-color" content="#0c1722">
+  <link rel="icon" href="img/lunaria/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap">
+  <link rel="stylesheet" href="css/store.css">
+</head>
+<body data-page="wishlist">
+<main id="main">
+  <section class="page-hero">
+    <div class="footer-sky" aria-hidden="true"></div>
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Fil d’Ariane"><a href="index.html">Accueil</a><span aria-hidden="true">/</span><span>Favoris</span></nav>
+      <h1>Mes favoris</h1>
+      <p data-wish-sub>Gardez vos coups de cœur à portée de main.</p>
+    </div>
+  </section>
+  <section class="section is-tight">
+    <div class="wrap">
+      <div class="toolbar" data-wish-toolbar hidden>
+        <p class="result-count" data-wish-total></p>
+        <button class="btn btn-sm" type="button" data-add-all>Tout ajouter au panier</button>
+      </div>
+      <div class="grid is-4" data-wish-grid></div>
+    </div>
+  </section>
+</main>
+
+<script src="js/store/products.js"></script>
+<script src="js/store/core.js"></script>
+<script>
+  Lunaria.ready(function () {
+    const L = Lunaria;
+    const grid = L.$('[data-wish-grid]');
+    function render() {
+      const items = L.wishlist.ids().map(L.getProduct);
+      L.$('[data-wish-toolbar]').hidden = !items.length;
+      L.$('[data-wish-total]').innerHTML = `<strong>${items.length}</strong> ${items.length > 1 ? 'montures' : 'monture'} en favoris`;
+      if (!items.length) {
+        grid.innerHTML = `<div class="empty" style="grid-column:1/-1">
+          <div class="empty-moon is-heart" aria-hidden="true">${L.icon('heart')}</div>
+          <h2>Aucun favori pour l’instant</h2>
+          <p>Touchez le cœur sur une monture pour la retrouver ici.</p>
+          <a class="btn" href="catalog-list.html">Parcourir les lunettes</a></div>`;
+        L.$('.empty-moon .i', grid).style.cssText = 'width:52px;height:52px';
+        return;
+      }
+      L.renderGrid(grid, items);
+    }
+    L.$('[data-add-all]').addEventListener('click', () => {
+      let added = 0;
+      L.wishlist.ids().forEach(id => {
+        const p = L.getProduct(id);
+        if (L.stock(id) > 0 && L.cart.add(L.defaultLine(p)).ok) added++;
+      });
+      if (added) { L.flyToCart(L.$('.card-frame', grid)); L.toast(`${added} monture${added > 1 ? 's ajoutées' : ' ajoutée'} au panier (verres sans correction).`, { icon: 'bag', action: { label: 'Voir le panier', fn: L.openCart } }); }
+      else L.toast('Aucune monture disponible à ajouter.', { type: 'error' });
+    });
+    L.on('wishlist', render);
+    render();
+  });
+</script>
+</body>
+</html>

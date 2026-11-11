@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lunaria — Lunettes élégantes et responsables</title>
+  <meta name="description" content="Lunaria crée des lunettes optiques et solaires inspirées par la nature et la lumière. Livraison gratuite dès 100 $ au Canada, retours 30 jours.">
+  <meta name="theme-color" content="#0c1722">
+  <link rel="icon" href="img/lunaria/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap">
+  <link rel="stylesheet" href="css/store.css">
+</head>
+<body data-page="home">
+<main id="main">
+
+  <!-- Héros : ciel de nuit, lune et monture -->
+  <section class="hero" data-hero>
+    <canvas class="hero-stars" aria-hidden="true"></canvas>
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="kicker is-light">Nouvelle collection · Automne 2026</p>
+        <h1 class="hero-title"><span class="hero-line"><span>Voyez le style</span></span><span class="hero-line"><span><em>autrement.</em></span></span></h1>
+        <p class="hero-lead">Des montures inspirées par la nature et la lumière de la lune : lignes raffinées, matériaux choisis avec soin et un confort qui dure toute la journée.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-light btn-lg" href="catalog-list.html?type=optique">Magasiner les optiques</a>
+          <a class="btn btn-outline-light btn-lg" href="catalog-list.html?type=solaire">Découvrir les solaires</a>
+        </div>
+        <ul class="hero-proof">
+          <li data-home-rating></li>
+          <li><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 4h14v12H1zM15 9h4l3 3v4h-7z"/><circle cx="5.5" cy="18.5" r="2"/><circle cx="18.5" cy="18.5" r="2"/></svg>Livraison gratuite dès 100 $</li>
+          <li><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 15.5-6.3L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15.5 6.3L3 16"/><path d="M8 16H3v5"/></svg>Retours gratuits 30 jours</li>
+        </ul>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="hero-orbit"></div>
+        <div class="hero-moon" data-depth="14"><span></span></div>
+        <svg class="hero-glasses" data-depth="34" viewBox="0 0 560 300" fill="none">
+          <defs>
+            <radialGradient id="heroLens" cx="35%" cy="28%" r="85%">
+              <stop offset="0" stop-color="#F2CCB6" stop-opacity=".42"/>
+              <stop offset=".55" stop-color="#023859" stop-opacity=".28"/>
+              <stop offset="1" stop-color="#0c1722" stop-opacity=".6"/>
+            </radialGradient>
+            <linearGradient id="heroRim" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#fff3ea"/>
+              <stop offset=".5" stop-color="#F2CCB6"/>
+              <stop offset="1" stop-color="#BF947A"/>
+            </linearGradient>
+          </defs>
+          <g class="hero-glasses-float">
+            <g transform="translate(178 160)">
+              <path class="lens" d="M-72-26C-72-52-40-56 0-56S72-52 72-26C72 18 42 58 0 58S-72 18-72-26Z" fill="url(#heroLens)"/>
+              <path class="draw" pathLength="1" d="M-72-26C-72-52-40-56 0-56S72-52 72-26C72 18 42 58 0 58S-72 18-72-26Z" stroke="url(#heroRim)" stroke-width="9"/>
+            </g>
+            <g transform="translate(382 160) scale(-1 1)">
+              <path class="lens" d="M-72-26C-72-52-40-56 0-56S72-52 72-26C72 18 42 58 0 58S-72 18-72-26Z" fill="url(#heroLens)"/>
+              <path class="draw" pathLength="1" d="M-72-26C-72-52-40-56 0-56S72-52 72-26C72 18 42 58 0 58S-72 18-72-26Z" stroke="url(#heroRim)" stroke-width="9"/>
+            </g>
+            <path class="draw" pathLength="1" d="M248 139Q280 111 312 139" stroke="#F2CCB6" stroke-width="9" stroke-linecap="round"/>
+            <path class="draw" pathLength="1" d="M108 129l-56-20" stroke="#F2CCB6" stroke-width="9" stroke-linecap="round"/>
+            <path class="draw" pathLength="1" d="M452 129l56-20" stroke="#BF947A" stroke-width="9" stroke-linecap="round"/>
+            <path class="lens" d="M132 150l26-30M146 164l12-14M336 150l26-30M350 164l12-14" stroke="#fff" stroke-opacity=".55" stroke-width="5" stroke-linecap="round"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+    <a class="hero-scroll" href="#collections" aria-label="Défiler vers les collections"></a>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Titane recyclé</span><span>Acétate biosourcé</span><span>Verres antireflet inclus</span><span>Livraison gratuite dès 100 $</span><span>Retours gratuits 30 jours</span><span>Garantie 2 ans</span>
+      <span>Titane recyclé</span><span>Acétate biosourcé</span><span>Verres antireflet inclus</span><span>Livraison gratuite dès 100 $</span><span>Retours gratuits 30 jours</span><span>Garantie 2 ans</span>
+    </div>
+  </div>
+
+  <!-- Collections -->
+  <section class="section" id="collections">
+    <div class="wrap">
+      <div class="section-head" data-reveal>
+        <p class="kicker">Collections</p>
+        <h2>Une monture pour chaque lumière</h2>
+        <p>Des formes sobres et distinctives, pensées pour accompagner le quotidien comme les soirs d’été.</p>
+      </div>
+      <div class="collections">
+        <a class="collection" href="catalog-list.html?type=optique" data-reveal>
+          <div class="collection-art" data-frame="celeste:nuit"></div>
+          <div>
+            <p class="kicker" data-count="optique">Optiques</p>
+            <h3>Lunettes optiques</h3>
+            <p>Des montures légères et confortables, avec verres correcteurs, progressifs ou filtre lumière bleue.</p>
+            <span class="link-arrow">Découvrir <svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </div>
+        </a>
+        <a class="collection is-dark" href="catalog-list.html?type=solaire" data-reveal style="--d:120ms">
+          <div class="collection-art" data-frame="equinoxe:or"></div>
+          <div>
+            <p class="kicker" data-count="solaire">Solaires</p>
+            <h3>Lunettes solaires</h3>
+            <p>Protection UV400, verres polarisés ou à votre vue.</p>
+            <span class="link-arrow">Découvrir <svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </div>
+        </a>
+        <a class="collection is-green" href="catalog-list.html?tag=responsable" data-reveal style="--d:240ms">
+          <div class="collection-art" data-frame="ambre:ecaille"></div>
+          <div>
+            <p class="kicker" data-count="responsable">Responsable</p>
+            <h3>Collection responsable</h3>
+            <p>Titane recyclé et acétate biosourcé.</p>
+            <span class="link-arrow">Découvrir <svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sélection -->
+  <section class="section is-tint" id="vedettes">
+    <div class="wrap">
+      <div class="section-head" data-reveal>
+        <p class="kicker">Sélection Lunaria</p>
+        <h2>Raffinées. Légères. Inoubliables.</h2>
+      </div>
+      <div class="tabs" role="tablist" aria-label="Sélection" data-reveal>
+        <button type="button" role="tab" aria-selected="true" data-tab="populaires">Les plus aimées</button>
+        <button type="button" role="tab" aria-selected="false" data-tab="nouveautes">Nouveautés</button>
+        <button type="button" role="tab" aria-selected="false" data-tab="solaires">Solaires</button>
+      </div>
+      <div class="grid is-4" data-home-grid role="tabpanel" aria-live="polite"></div>
+      <div class="grid-foot"><a class="btn btn-ghost" href="catalog-list.html">Voir toutes les lunettes</a></div>
+    </div>
+  </section>
+
+  <!-- Comment ça marche -->
+  <section class="section" id="comment">
+    <div class="wrap">
+      <div class="section-head" data-reveal>
+        <p class="kicker">Comment ça marche</p>
+        <h2>De la monture à votre porte</h2>
+        <p>Trois étapes simples, comme les phases de la lune.</p>
+      </div>
+      <div class="steps">
+        <div class="step" data-reveal>
+          <div class="step-moon"><svg viewBox="-34 -34 68 68" aria-hidden="true"><circle r="30" class="moon-shadow"/><path class="moon-lit" data-phase="0.28"/></svg></div>
+          <small>Étape 1</small>
+          <h3>Choisissez votre monture</h3>
+          <p>Filtrez par forme, matériau ou couleur et ajoutez vos coups de cœur aux favoris.</p>
+        </div>
+        <div class="step" data-reveal style="--d:140ms">
+          <div class="step-moon"><svg viewBox="-34 -34 68 68" aria-hidden="true"><circle r="30" class="moon-shadow"/><path class="moon-lit" data-phase="0.5"/></svg></div>
+          <small>Étape 2</small>
+          <h3>Ajoutez vos verres</h3>
+          <p>Sans correction, unifocaux ou progressifs : saisissez votre ordonnance ou envoyez-la plus tard.</p>
+        </div>
+        <div class="step" data-reveal style="--d:280ms">
+          <div class="step-moon"><svg viewBox="-34 -34 68 68" aria-hidden="true"><circle r="30" class="moon-shadow"/><path class="moon-lit" data-phase="1"/></svg></div>
+          <small>Étape 3</small>
+          <h3>Recevez-les chez vous</h3>
+          <p>Livraison suivie partout au Canada, gratuite dès 100 $. Retours gratuits pendant 30 jours.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Valeurs -->
+  <section class="section is-night" id="about">
+    <div class="night-glow" aria-hidden="true"></div>
+    <div class="wrap">
+      <div class="section-head" data-reveal>
+        <p class="kicker">Pourquoi Lunaria</p>
+        <h2>Le style sans compromis sur le confort</h2>
+        <p>Chaque monture est dessinée pour être portée du matin jusqu’au clair de lune.</p>
+      </div>
+      <div class="values">
+        <div class="value" data-reveal>
+          <div class="value-icon"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.2 12.2a6 6 0 0 0-8.5-8.5L5 10.5V19h8.5z"/><path d="M16 8 2 22M17.5 15H9"/></svg></div>
+          <h3>Légèreté</h3>
+          <p>De 14 à 22 grammes : des montures conçues pour rester agréables à porter toute la journée.</p>
+        </div>
+        <div class="value" data-reveal style="--d:120ms">
+          <div class="value-icon"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z"/></svg></div>
+          <h3>Design intemporel</h3>
+          <p>Des formes inspirées par la nature, la lumière et une esthétique minimaliste qui traverse les saisons.</p>
+        </div>
+        <div class="value" data-reveal style="--d:240ms">
+          <div class="value-icon"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.5 19 2c1 2 2 4.2 2 8 0 5.5-4.8 10-10 10Z"/><path d="M2 21c0-3 1.9-5.4 5.1-6C9.5 14.5 12 13 13 12"/></svg></div>
+          <h3>Choix responsables</h3>
+          <p>Titane recyclé, acétate biosourcé et étuis en liège : une attention portée à chaque matériau.</p>
+        </div>
+      </div>
+      <div class="stats">
+        <div class="stat" data-reveal><strong data-count-to="0" data-decimals="1" data-stat="rating">0</strong><span>note moyenne sur 5</span></div>
+        <div class="stat" data-reveal style="--d:100ms"><strong data-count-to="0" data-stat="reviews">0</strong><span>avis clients</span></div>
+        <div class="stat" data-reveal style="--d:200ms"><strong data-count-to="30">0</strong><span>jours pour changer d’avis</span></div>
+        <div class="stat" data-reveal style="--d:300ms"><strong data-count-to="2">0</strong><span>ans de garantie</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Avis -->
+  <section class="section" id="avis">
+    <div class="wrap">
+      <div class="section-head" data-reveal>
+        <p class="kicker">Ils les portent</p>
+        <h2>Ce que disent nos clients</h2>
+      </div>
+      <div class="quotes">
+        <figure class="quote" data-reveal>
+          <blockquote>Je les porte toute la journée sans y penser. La finition est impeccable.</blockquote>
+          <footer><span class="avatar">C</span><div><strong>Camille R.</strong>Montréal · monture Ambre</div></footer>
+        </figure>
+        <figure class="quote" data-reveal style="--d:120ms">
+          <blockquote>J’ai envoyé mon ordonnance le soir même. Mes progressifs sont arrivés la semaine suivante.</blockquote>
+          <footer><span class="avatar">J</span><div><strong>Julien T.</strong>Québec · monture Éclipse</div></footer>
+        </figure>
+        <figure class="quote" data-reveal style="--d:240ms">
+          <blockquote>On me complimente chaque fois que je les porte. Le retour gratuit m’a rassurée.</blockquote>
+          <footer><span class="avatar">L</span><div><strong>Léa P.</strong>Toronto · solaires Aurore</div></footer>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Infolettre -->
+  <section class="section" style="padding-top:0">
+    <div class="wrap">
+      <div class="newsletter" data-reveal>
+        <div class="newsletter-moon" aria-hidden="true"></div>
+        <div>
+          <p class="kicker is-light">Infolettre</p>
+          <h2>Entrez dans l’univers Lunaria</h2>
+          <p>Nouveautés, éditions limitées et <strong style="color:#fff">15 % sur votre première commande</strong>.</p>
+        </div>
+        <form class="inline-form" data-newsletter novalidate>
+          <label class="sr-only" for="news-email">Courriel</label>
+          <input id="news-email" type="email" placeholder="Votre adresse courriel" required>
+          <button class="btn btn-light" type="submit">Recevoir mon code</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script src="js/store/products.js"></script>
+<script src="js/store/core.js"></script>
+<script src="js/store/page-home.js"></script>
+</body>
+</html>
